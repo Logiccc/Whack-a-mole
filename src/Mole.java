@@ -7,8 +7,18 @@ public class Mole implements Runnable{
     int arrayX[] = new int[]{150, 275, 400}; //En array med X värdena från spel planen.
     int arrayY[] = new int[]{150, 275, 400};// En array med Y värdena från spel planen.
     public Mole(){
-        moleModel = new Rectangle(,,50,50);
+        moleModel = new Rectangle(getRandomX(),getRandomY(),50,50);
         c3 = new Color(0xCC87AA);
+    }
+
+    public int getRandomX(){
+        int rnd = (int)(Math.random()*arrayX.length);
+        return arrayX[rnd];
+    }
+
+    public int getRandomY(){
+        int rnd2 = (int)(Math.random()*arrayY.length);
+        return arrayY[rnd2];
     }
 
 
