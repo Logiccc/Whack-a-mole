@@ -8,7 +8,7 @@ Ett spel där du ska träffa av en figur som dyker upp i banan innan den försvi
  */
 
 public class WhackaMole extends Canvas {
-            public MulvadN mole;
+            public Mole mole;
         public WhackaMole() {
             JFrame frame = new JFrame("SpelPlan");
             this.setSize(new Dimension(600, 600));
@@ -17,7 +17,7 @@ public class WhackaMole extends Canvas {
             frame.pack();
             frame.setVisible(true);
             frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            mole = new MulvadN();
+            mole = new Mole();
             Thread MulvadN = new Thread(this.mole);
             MulvadN.start();
 
@@ -76,6 +76,7 @@ public class WhackaMole extends Canvas {
     }
     public static void main(String[] args) {
     new WhackaMole();
+
     }
 
 }
